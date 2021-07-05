@@ -1,0 +1,46 @@
+/* CSS variable */
+
+:root {
+    --spacing: 0px;
+    --blur: 0px;
+    --base-color: rgb(116, 103, 58);
+}
+
+img {
+    width: 780px;
+    padding: var(--spacing);
+    background-color: var(--base-color);
+    filter: blur(var(--blur));
+}
+
+
+/* page design */
+
+body {
+    width: 850px;
+    height: 700px;
+    margin: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.h1 {
+    font-size: 40px;
+    color: var(--base-color);
+}
+
+.controls {
+    list-style: none;
+    padding: 0;
+    margin: 35px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sample-space {
+    width: 780px;
+    margin: auto;
+}
