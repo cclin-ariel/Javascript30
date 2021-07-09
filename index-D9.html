@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('hey');
+
+    // Interpolated
+    console.log('I am a %s person', 'human');
+
+    // Styled
+    console.log('%chey hey hey', 'color: red;');
+
+    // warning!
+    console.warn('stop!');
+
+    // Error :|
+    console.error('i don\'t know')
+
+    // Info
+    console.info('i work 8hrs a day.')
+
+    // Testing
+    const p = document.querySelector('p')
+    console.assert(p.classList.contains('fontRed'), 'if you saw this, this is wrong');
+    console.assert(1 === 1);//if it's true, not showing any msg
+    console.assert(p.innerHTML.match("她"), "我这儿才没有她这个人");
+
+    // clearing
+    console.clear();
+
+    // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+
+    console.clear();
+    // Grouping together
+    dogs.forEach(dog => {
+      // console.log(`This is ${dog.name}.`);
+      // console.log(`${dog.name} is ${dog.age} years old.`);
+      // console.log(`${dog.name} is ${dog.age * 7} dog years old.`);
+
+      // console.group(`${dog.name}`);
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}.`);
+      console.log(`${dog.name} is ${dog.age} years old.`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old.`);
+      console.groupEnd(`${dog.name}`);
+
+    });
+
+    // counting
+    console.count('ariel');
+    console.count('ariel');
+    console.count('cool');
+    console.count('cool');
+    console.count('ariel');
+    console.count('ariel');
+    console.count('cool');
+    console.count('cool');
+    console.count('ariel');
+    console.count('ariel');
+    console.count('cool');
+    console.count('ariel');
+    console.count('ariel');
+    console.count('cool');
+    console.count('cool');
+    console.count('cool');
+
+    // timing???
+    console.time('start to end')
+    fetch('https://www.google.com/')
+      .then(data => data.json())
+      .then(data => {
+        console.time('start to end')
+        console.log(data);
+
+      });
+
+
+
+  </script>
+</body>
+
+</html>
