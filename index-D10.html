@@ -115,7 +115,7 @@
       lastCheck = this;
     }
     checkBoxes.forEach(checkBox => {
-      checkBox.addEventListener('click',handleCheck)
+      checkBox.parentNode.addEventListener('click',handleCheck)
     });
   </script>
 </body>
