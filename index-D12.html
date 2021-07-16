@@ -7,6 +7,33 @@
 </head>
 <body>
 <script>
+  //create a Secrete Code
+  //listener keyup
+  //create a array to keep the keyup data
+  //let array.length = secreteCode.length
+  //let array's content turn to string type
+
+  const secreteCode = 'wahaha';
+  const keyupArr = [];
+  let activated = false;
+
+function showSthSecrete(e) {
+  keyupArr.push(e.key);
+  if(keyupArr.length > secreteCode.length) keyupArr.shift();
+  
+  let enteredCode = keyupArr.join('');
+  console.log(enteredCode);
+  
+  //if(enteredCode == secreteCode){console.log('Proud!!');}
+  if(enteredCode.includes(secreteCode)){
+    console.log('Proud!!');
+    activated = true;
+  }
+  if(activated) cornify_add();
+}
+
+  window.addEventListener('keyup', showSthSecrete);
+
 </script>
 </body>
 </html>
