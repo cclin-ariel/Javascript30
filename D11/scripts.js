@@ -6,7 +6,7 @@ const toggle = document.querySelector('.toggle');
 const ranges = document.querySelectorAll('.player__slider');
 const skipButtons = document.querySelectorAll('[data-skip]');
 const fullscreen = document.querySelector('.full__screen');
-
+v
 
 //play/pause video
 function togglePlay(){
@@ -14,6 +14,7 @@ function togglePlay(){
     const method = video.paused ? 'play' : 'pause';
     video[method]();      
 }
+
 // toggle Play-icon
 function toggleIcon(){
     // const icon = this.play ? '❚ ❚' : '►' ;
