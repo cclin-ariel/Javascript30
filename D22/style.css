@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0; /* Important! */
+  font-family: sans-serif;
+  background:
+    linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+    linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+    linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+    linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 500px;
+  font-size: 20px;
+  line-height: 2;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  background: rgba(0,0,0,0.05);
+  border-radius: 20px;
+}
+
+.highlight {
+  transition: all 0.2s;
+  /* border-bottom: 2px solid white; */
+  position: absolute;
+  top: 0;
+  /* background: white; */
+  left: 0;
+  z-index: -1;
+  /* border-radius: 20px; */
+  display: block;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.2); */
+  
+
+  background: linear-gradient(104deg, rgba(130, 255, 173,0) 0.9%, rgba(130, 255, 173,1.25) 2.4%, rgba(130, 255, 173,0.5) 5.8%, rgba(130, 255, 173,0.1) 93%, rgba(130, 255, 173,0.7) 96%, rgba(130, 255, 1732,0) 98%), linear-gradient(183deg, rgba(130, 255, 173,0) 0%, rgba(130, 255, 173,0.3) 7.9%, rgba(130, 255, 173,0) 15%);
+  padding: 0.6em 13.7px;
+  border-radius: 7.5px;
+  text-shadow: -12px 12px 9.8px rgba(130, 255, 173,0.7), 21px -18.1px 7.3px rgba(255, 255, 255,1), -18.1px -27.3px 30px rgba(255, 255, 255,1);
+
+}
+
+.menu {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin:100px 0;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 5px;
+  margin: 0 20px;
+  color: black;
+}
